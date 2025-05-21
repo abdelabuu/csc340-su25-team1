@@ -9,7 +9,11 @@ Jacob Echeverry Espinosa
 > List your names
 
 ## Description
-> A brief description of your product. Include a brief summary for the services provided by the app.
+> This app helps connect customers with service providers through one simple platform.  
+> Customers can create profiles, browse and subscribe to services, and leave reviews.  
+> Providers can post services, view stats, and reply to feedback.  
+> The goal is to make it easy for users to manage everything in one place.
+
 > Possible questions to answer here:  What is the motivation for the app? What are the goals of the app/ What problem will the app solve?
 >
 
