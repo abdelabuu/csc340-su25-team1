@@ -3,10 +3,10 @@
 Jacob Echeverry Espinosa
 
 ## Title
-> Your project title
+> Car Dealership 
 
 ## Team Members
-> List your names
+> Jacob Echeverry Espinosa
 
 ## Description
 > A brief description of your product. Include a brief summary for the services provided by the app.
@@ -19,8 +19,8 @@ Jacob Echeverry Espinosa
     2. View available services - .
     3. Subscribe to available services - .
     4. Write reviews for subscribed services - .
-2. Provider (the user with the provider role):
-    1. Create/modify/remove provider profile - .
-    2. Create services - .
+2. Provider ():
+    1. Create/modify/remove provider profile -.
+    2. Create services - f .
     3. View customer statistics -  .
     4. Reply to reviews - .
