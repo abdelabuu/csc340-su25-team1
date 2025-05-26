@@ -25,3 +25,22 @@ N/A for now — this will be updated if we use any libraries, frameworks, or des
 ### 1.5 Document Overview  
 This document includes an overview of the product, its features, and both functional and non-functional requirements. Each team member’s use-cases are included in Section 3.
 
+## 2. Product Overview
+
+### 2.1 Product Functions  
+Dealership Connect allows sellers to upload and manage car listings that include images, pricing, and basic car details. Customers can view listings and click for more information. In later stages, we plan to allow search or filter functionality.
+
+### 2.2 Product Constraints  
+- The website will be built using HTML, CSS, and Bootstrap only (no JavaScript or backend yet)
+- Pages must remain simple and load quickly
+- The site should work on all major browsers
+- No user login or data persistence in version 1
+
+### 2.3 User Characteristics  
+Users are expected to be able to use a basic website with clickable links and readable text. No technical experience is required. Sellers (providers) will be adding content; customers will be browsing only.
+
+### 2.4 Assumptions and Dependencies  
+- We assume sellers have access to a computer or laptop to upload content
+- Customers are browsing from a desktop or mobile browser
+- Bootstrap must be available via CDN (internet connection required)
+- Dependencies may be added later if JavaScript or backend support is introduced
