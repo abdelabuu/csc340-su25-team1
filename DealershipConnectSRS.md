@@ -55,7 +55,17 @@ Users are expected to be able to use a basic website with clickable links and re
 - The provider can update the information on the about page.
 - The provider's listings must be styled using Bootstrap cards.
 
-  ### 3.2 Functional Requirements - Jacob
+ ### 3.2 Functional Requirements - Jacob
+
+
+
+
+ ### 3.3 Non-Functional Requirements
+
+- The website must load in under 2 seconds on most devices.
+- The layout should be clean, easy to navigate, and mobile-friendly.
+- Bootstrap must be used consistently across all pages.
+- All links (navigation and buttons) must work properly.
 
 <!-- describe customer-side features  -->
 
