@@ -44,3 +44,19 @@ Users are expected to be able to use a basic website with clickable links and re
 - Customers are browsing from a desktop or mobile browser
 - Bootstrap must be available via CDN (internet connection required)
 - Dependencies may be added later if JavaScript or backend support is introduced
+
+## 3. Requirements
+
+### 3.1 Functional Requirements - Abdel 
+
+- The provider can upload a new car listing with details like title, image, price, and description.
+- The provider can view their existing listings on the homepage.
+- The provider can link each car to a details page for more info.
+- The provider can update the information on the about page.
+- The provider's listings must be styled using Bootstrap cards.
+
+  ### 3.2 Functional Requirements - Jacob
+
+<!-- describe customer-side features  -->
+
+
