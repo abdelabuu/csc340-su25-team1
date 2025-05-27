@@ -57,8 +57,9 @@ Users are expected to be able to use a basic website with clickable links and re
 
  ### 3.2 Functional Requirements - Jacob
 
-
-
+- The customer can check out car listings and their descriptions
+- The customer can buy cars or register for a test drive by clicking purchase button
+- They can then review the cars they have bought or test driven
 
  ### 3.3 Non-Functional Requirements
 
