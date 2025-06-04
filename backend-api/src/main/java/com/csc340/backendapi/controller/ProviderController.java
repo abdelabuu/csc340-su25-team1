@@ -1,42 +1,37 @@
-package com.csc340.backendapi.controller;
+package com.csc340.backendapi.service;
 
 import com.csc340.backendapi.model.Provider;
-import com.csc340.backendapi.service.ProviderService;
+import com.csc340.backendapi.repository.ProviderRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
-@RestController
-@RequestMapping("/providers")
-public class ProviderController {
+@Service
+public class ProviderService {
 
     @Autowired
-    private ProviderService providerService;
+    private ProviderRepository providerRepository;
 
-    @PostMapping
-    public Provider createProvider(@RequestBody Provider provider) {
-        return providerService.createProvider(provider);
+    public Provider createProvider(Provider provider) {
+        return providerRepository.save(provider);
     }
 
-    @GetMapping
     public List<Provider> getAllProviders() {
-        return providerService.getAllProviders();
+        return providerRepository.findAll();
     }
 
-    @PutMapping("/{id}")
-    public Provider updateProvider(@PathVariable Long id, @RequestBody Provider provider) {
-        return providerService.updateProvider(id, provider);
+    public Optional<Provider> getProviderById(Long id) {
+        return providerRepository.findById(id);
     }
 
-    @DeleteMapping("/{id}")
-    public void deleteProvider(@PathVariable Long id) {
-        providerService.deleteProvider(id);
+    public Provider updateProvider(Long id, Provider provider) {
+        provider.setId(id); // this connects the ID to the updated object
+        return providerRepository.save(provider);
     }
 
-    @GetMapping("/{id}")
-    public Optional<Provider> getProviderById(@PathVariable Long id) {
-        return providerService.getProviderById(id);
+    public void deleteProvider(Long id) {
+        providerRepository.deleteById(id);
     }
 }

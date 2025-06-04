@@ -15,14 +15,16 @@ public class Provider {
     private String name;
     private String email;
     private String description;
+    private String location;
 
     // Constructors
     public Provider() {}
 
-    public Provider(String name, String email, String description) {
+    public Provider(String name, String email, String description, String location) {
         this.name = name;
         this.email = email;
         this.description = description;
+        this.location = location;
     }
 
     // Getters & Setters
@@ -37,4 +39,7 @@ public class Provider {
 
     public String getDescription() { return description; }
     public void setDescription(String description) { this.description = description; }
+
+    public String getLocation() { return location; }
+    public void setLocation(String location) { this.location = location; }
 }
