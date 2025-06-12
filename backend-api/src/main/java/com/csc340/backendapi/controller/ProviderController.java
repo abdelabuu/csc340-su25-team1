@@ -1,37 +1,50 @@
-package com.csc340.backendapi.service;
-
-import com.csc340.backendapi.model.Provider;
-import com.csc340.backendapi.repository.ProviderRepository;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+package com.csc340.backendapi.controller;
 
 import java.util.List;
 import java.util.Optional;
 
-@Service
-public class ProviderService {
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.csc340.backendapi.model.Provider;
+import com.csc340.backendapi.service.ProviderService;
+
+@RestController
+@RequestMapping("/providers")
+public class ProviderController {
 
     @Autowired
-    private ProviderRepository providerRepository;
+    private ProviderService providerService;
 
-    public Provider createProvider(Provider provider) {
-        return providerRepository.save(provider);
+    @PostMapping
+    public Provider createProvider(@RequestBody Provider provider) {
+        return providerService.createProvider(provider);
     }
 
+    @GetMapping
     public List<Provider> getAllProviders() {
-        return providerRepository.findAll();
+        return providerService.getAllProviders();
     }
 
-    public Optional<Provider> getProviderById(Long id) {
-        return providerRepository.findById(id);
+    @GetMapping("/{id}")
+    public Optional<Provider> getProviderById(@PathVariable Long id) {
+        return providerService.getProviderById(id);
     }
 
-    public Provider updateProvider(Long id, Provider provider) {
-        provider.setId(id); // this connects the ID to the updated object
-        return providerRepository.save(provider);
+    @PutMapping("/{id}")
+    public Provider updateProvider(@PathVariable Long id, @RequestBody Provider provider) {
+        return providerService.updateProvider(id, provider);
     }
 
-    public void deleteProvider(Long id) {
-        providerRepository.deleteById(id);
+    @DeleteMapping("/{id}")
+    public void deleteProvider(@PathVariable Long id) {
+        providerService.deleteProvider(id);
     }
 }
