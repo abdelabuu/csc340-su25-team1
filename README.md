@@ -17,7 +17,8 @@ A clean, Bootstrap-powered static front-end that lets **Drivers** browse and buy
   - Register an account  
   - Purchase (“Buy Car”)  
   - Leave reviews  
-  - View their purchased cars  
+  - View their purchased cars
+  - add new car
 
 ---
 
