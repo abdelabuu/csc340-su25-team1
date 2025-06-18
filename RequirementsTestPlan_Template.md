@@ -1,31 +1,46 @@
-# Class Connect Requirements Testing
+# Auto Connect – Requirements & Test Scenarios
+
 ## Actors
-- Provider
-- Customer
+- **Dealership** (Provider)  
+- **Driver** (Customer)
 
-### Use Cases
-#### 1. Provider: Create provider profile use case:
-1. Provider P1 logs in for the first time and creates a profile.
-2. P1 creates new services S1 and S2 with values for searchable criteria C1, C2, C3 (C1=V1, C2=V2, C3=V3).  
-P1 exits the app.
+---
 
-#### 2. Customer: Create customer profile:
-1. Customer C1 logs in for the first time and creates a profile.
+## Use Cases
 
-#### 3. Customer:  View and subscribe to services:
-1. Customer C2 logs in for the first time and creates a new profile.
-2. C2 views available services S1 and S2.
-3. C2 subscribes to S1.
+### 1. Dealership: Create & Manage Profile  
+1. D1 visits **register.html**, signs in for the first time, and fills out their dealership profile.  
+2. D1 exits the site.  
 
-#### 4. Customer: Write review
-1. C2 log in and views their subscriptions.
-2. C2 writes a positive review of service S1. C2 exits.
+### 2. Dealership: Add Car Listings  
+1. D1 logs back in, navigates to their dashboard (future feature), and creates two new listings:  
+   - Car S1 with attributes (make, model, year, price)  
+   - Car S2 with attributes (make, model, year, price)  
+2. D1 exits the site.
 
-#### 5. Customer: Modify profile
-1. C1 logs in and modifies their profile.
-2. C1 views service S1 and the positive review.
-3. C1 subscribes to S1. C1 exits.
+### 3. Driver: Create Profile  
+1. Dr1 visits **register.html**, signs up as a new Driver, and completes their profile.  
+2. Dr1 exits the site.
 
-#### 6. Provider:  Reply to Review, View Customer Statistics, & Modify Profile use cases
-1. Provider P1 logs in and reads their review and replies with thanks. 
-2. P1 views customer statistics.  P1 modifies his profile. P1 exits.
+### 4. Driver: Browse & Buy a Car  
+1. Dr2 registers (if new) or logs in, lands on **index.html**.  
+2. Dr2 browses the car cards (S1, S2).  
+3. Dr2 clicks **Buy Car** on S1 → purchase is recorded.  
+4. Dr2 exits the site.
+
+### 5. Driver: Leave a Review  
+1. Dr2 logs in, clicks **My Cars** → sees purchased car S1.  
+2. Dr2 goes to **review.html**, selects S1, and submits a positive review.  
+3. Dr2 exits the site.
+
+### 6. Driver: Modify Profile  
+1. Dr1 logs in, visits **register.html**, and updates their profile info.  
+2. Dr1 views **index.html** and sees existing cars and any reviews.  
+3. Dr1 optionally buys another car or exits the site.
+
+### 7. Dealership: Reply to Reviews & View Stats  
+1. D1 logs in, goes to the (future) Reviews dashboard, reads Dr2’s review of S1, and posts a “Thank you!” reply.  
+2. D1 checks their Customer Statistics page (future) to see how many bought, viewed, or reviewed S1 & S2.  
+3. D1 modifies their dealership profile if needed, then exits.
+
+---
